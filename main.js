@@ -97,7 +97,8 @@ d3.json("Data/RegionMapAll.json").then((geojson,err1)=> {
         var map = L.map('map', {
             center: [27.898178138933044, -14.773654101276128], // Centered over the US
             zoom: 3,
-            minZoom: 2,
+            zoomSnap: 0.5,
+            minZoom: 1.5,
             maxZoom: 9,
             attributionControl: false,
             zoomControl: true
