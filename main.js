@@ -95,8 +95,8 @@ d3.json("Data/RegionMapAll.json").then((geojson,err1)=> {
         // – Map –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– \\
 
         var map = L.map('map', {
-            center: [27.898178138933044, -14.773654101276128], // Centered over the US
-            zoom: 3,
+            center: [27.898178138933044, -5], // Centered over the US
+            zoom: 2.5,
             zoomSnap: 0.5,
             minZoom: 1.5,
             maxZoom: 9,
@@ -343,7 +343,7 @@ d3.json("Data/RegionMapAll.json").then((geojson,err1)=> {
             else {
                 map.addLayer(worldMap);
                 map.removeLayer(stateMap);
-                map.flyTo([27.898178138933044, -14.773654101276128], 3, { duration: .4 });
+                map.flyTo([27.898178138933044, -5], 2.5, { duration: .4 });
                 mapName = "Film Festival Selections Worldwide";
                 markers.forEach(marker => map.removeLayer(marker));
                 markers = []; // Reset the markers array
