@@ -261,7 +261,7 @@ d3.json("Data/RegionMapAll.json").then((geojson,err1)=> {
         function colorScale(d){
             const myColor = d3.scaleLinear()
                 .range(["#cfdadc", "#3b9ba6"])
-                .domain([0,9]);
+                .domain([0,10]);
 
             if (d === 0){
                 return '#252525';
