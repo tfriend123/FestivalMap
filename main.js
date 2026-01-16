@@ -244,12 +244,12 @@ d3.json("Data/RegionMapAll.json").then((geojson,err1)=> {
         // – Color –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– \\
 
         function getColorSmall(d) {
-            return d > 6 ? '#66ad97' :
-                d > 5 ? '#75b598ff' :
-                    d > 4 ? '#8ec8aeff' :
-                        d > 3 ? '#a9e0c7' :
-                            d > 2 ? '#c3efdbff' :
-                                d >= 1 ? '#d2f7e6' :
+            return d > 6 ? '#e5a14e' :
+                d > 5 ? '#ecae61ff' :
+                    d > 4 ? '#f0bf82ff' :
+                        d > 3 ? '#f7d4aaff' :
+                            d > 2 ? '#fae5cbff' :
+                                d >= 1 ? '#fdf0e1ff' :
                                     d > 0 ? 'rgb(195,195,195)' :
                                         '#f0e7dd';
         }
@@ -260,7 +260,7 @@ d3.json("Data/RegionMapAll.json").then((geojson,err1)=> {
 
         function colorScale(d){
             const myColor = d3.scaleLinear()
-                .range(["#d2f7e6", "#66ad97"])
+                .range(["#c0ddd0ff", "#66ad97"])
                 .domain([0,11]);
 
             if (d === 0){
