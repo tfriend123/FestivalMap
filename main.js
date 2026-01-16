@@ -244,14 +244,14 @@ d3.json("Data/RegionMapAll.json").then((geojson,err1)=> {
         // – Color –––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– \\
 
         function getColorSmall(d) {
-            return d > 6 ? '#3b9ba6' :
-                d > 5 ? '#54a3ac' :
-                    d > 4 ? '#71aeb5' :
-                        d > 3 ? '#86b1b6' :
-                            d > 2 ? '#a5bec1' :
-                                d >= 1 ? '#cfdadc' :
+            return d > 6 ? '#66ad97' :
+                d > 5 ? '#75b598ff' :
+                    d > 4 ? '#8ec8aeff' :
+                        d > 3 ? '#a9e0c7' :
+                            d > 2 ? '#c3efdbff' :
+                                d >= 1 ? '#d2f7e6' :
                                     d > 0 ? 'rgb(195,195,195)' :
-                                        '#252525';
+                                        '#f0e7dd';
         }
 
 
@@ -260,11 +260,11 @@ d3.json("Data/RegionMapAll.json").then((geojson,err1)=> {
 
         function colorScale(d){
             const myColor = d3.scaleLinear()
-                .range(["#cfdadc", "#3b9ba6"])
+                .range(["#d2f7e6", "#66ad97"])
                 .domain([0,11]);
 
             if (d === 0){
-                return '#252525';
+                return '#f0e7dd';
             }
             return myColor(d);
         }
@@ -276,7 +276,7 @@ d3.json("Data/RegionMapAll.json").then((geojson,err1)=> {
                 fillColor: colorScale(feature.properties["count"]),
                 weight: 2,
                 opacity: 1,
-                color: '#111111',
+                color: '#fcf8f5',
                 fillOpacity: 1,
             };
         }
@@ -288,7 +288,7 @@ d3.json("Data/RegionMapAll.json").then((geojson,err1)=> {
 
             layer.setStyle({
                 weight: 5,
-                color: '#111111',
+                color: '#fcf8f5',
                 dashArray: '',
                 fillOpacity: 1
             });
@@ -304,7 +304,7 @@ d3.json("Data/RegionMapAll.json").then((geojson,err1)=> {
 
             layer.setStyle({
                 weight: 2,
-                color: '#111111',
+                color: '#fcf8f5',
                 dashArray: '',
                 fillOpacity: 1
             });
