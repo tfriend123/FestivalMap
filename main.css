@@ -44,7 +44,7 @@
         pointer-events: none; /* Allows mouse events to pass through */
         z-index: 1000;
         transition: transform 0.05s ease-in-out;
-        color: #66ad97;
+        color: #a2b749;
     }
     .info h4 {
         margin: 0 0 5px;
@@ -62,7 +62,7 @@
         pointer-events: none; /* Allows mouse events to pass through */
         z-index: 1000;
         transition: transform 0.05s ease-in-out;
-        color: #66ad97;
+        color: #a2b749;
     }
     .legend h4 {
         font: 30px/22px Bebas Neue, Bebas Neue, bold, sans-serif;
